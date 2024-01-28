@@ -8,14 +8,22 @@ goto :Disclaimer
 :Disclaimer
 echo.
 set /p Disclaimer="Do you agree to the Disclaimer? (Yes/No) "
-if /i "%Disclaimer%"=="Yes" goto :Warning
+if /i "%Disclaimer%"=="Yes" goto :svchost
 if /i "%Disclaimer%"=="No" goto :Close
 echo Invalid Syntax!
 goto :Disclaimer
 
+:svchost
+echo.
+set /p Warning="This will end the process svchost.exe and will Blue Screen of Death this PC. Are you okay with that? (Yes/No) "
+if /i "%Disclaimer%"=="Yes" goto :Warning
+if /i "%Disclaimer%"=="No" goto :Close
+echo Invalid Syntax!
+goto :svchost
+
 :Warning
 echo.
-set /p Warning="READ WARNING ^-^-^> THERE IS NO GOING BACK AFTER THIS! THIS IS YOUR LAST CHANCE TO STOP! THIS WILL BLUE SCREEN OF DEATH THIS  COMPUTER! ARE YOU SURE YOU WANT TO CONTINUE? (Yes/No) "
+set /p Warning="READ WARNING ^-^-^> THERE IS NO GOING BACK AFTER THIS! THIS IS YOUR LAST CHANCE TO STOP! THIS WILL BLUE SCREEN OF DEATH THIS COMPUTER! ARE YOU SURE YOU WANT TO CONTINUE? (Yes/No) "
 if /i "%Disclaimer%"=="Yes" goto :BSOD
 if /i "%Disclaimer%"=="No" goto :Close
 echo Invalid Syntax!
