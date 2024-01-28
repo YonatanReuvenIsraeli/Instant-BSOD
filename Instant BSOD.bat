@@ -15,7 +15,7 @@ goto :Disclaimer
 
 :svchost
 echo.
-set /p svchost="This will end the process svchost.exe and will Blue Screen of Death this PC. Are you okay with that? (Yes/No) "
+set /p svchost="This will end the system process svchost.exe and will Blue Screen of Death this PC. Are you okay with that? (Yes/No) "
 if /i "%svchost%"=="Yes" goto :Warning
 if /i "%svchost%"=="No" goto :Close
 echo Invalid Syntax!
