@@ -1,4 +1,5 @@
 @echo off
+setlocal
 title Instant BSOD
 echo Please run this batch file as an administrator.
 echo.
