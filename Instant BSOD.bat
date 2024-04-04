@@ -1,7 +1,7 @@
 @echo off
 setlocal
 title Instant BSOD
-echo Instant BSOD v1.0
+echo Instant BSOD v1.0.0
 echo.
 echo Please run this batch file as an administrator.
 echo.
