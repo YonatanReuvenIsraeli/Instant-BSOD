@@ -1,7 +1,11 @@
 @echo off
 setlocal
 title Instant BSOD
-echo Instant BSOD v1.0.1
+echo Program Name: Instant BSOD
+echo Version: 1.1.0
+echo Developer: @YonatanReuvenIsraeli
+echo Website: https://www.yonatanreuvenisraeli.dev
+echo License: GNU General Public License v3.0
 echo.
 echo Please run this batch file as an administrator.
 echo.
