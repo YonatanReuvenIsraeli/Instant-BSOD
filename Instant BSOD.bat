@@ -11,7 +11,8 @@ if not "%errorlevel%"=="0" goto NotAdministrator
 goto Disclaimer
 
 :NotAdministrator
-echo Please run this batch file as an administrator.
+echo Please run this batch file as an administrator. Press any key to close this batch file.
+pause > nul 2>&1
 goto Close
 
 :Disclaimer
