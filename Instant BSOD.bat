@@ -2,7 +2,7 @@
 setlocal
 title Instant BSOD
 echo Program Name: Instant BSOD
-echo Version: 2.0.0
+echo Version: 2.0.2
 echo Developer: @YonatanReuvenIsraeli
 echo Website: https://www.yonatanreuvenisraeli.dev
 echo License: GNU General Public License v3.0
@@ -11,6 +11,7 @@ if not "%errorlevel%"=="0" goto NotAdministrator
 goto Disclaimer
 
 :NotAdministrator
+echo.
 echo Please run this batch file as an administrator. Press any key to close this batch file.
 pause > nul 2>&1
 goto Close
