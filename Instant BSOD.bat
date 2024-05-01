@@ -2,7 +2,7 @@
 setlocal
 title Instant BSOD
 echo Program Name: Instant BSOD
-echo Version: 2.0.2
+echo Version: 2.0.3
 echo Developer: @YonatanReuvenIsraeli
 echo Website: https://www.yonatanreuvenisraeli.dev
 echo License: GNU General Public License v3.0
@@ -19,7 +19,6 @@ goto Close
 :Disclaimer
 echo.
 echo READ DISCLAIMER ^-^-^> THIS IS FOR EDUCATIONAL PURPOSES ONLY! DO NOT USE THIS ON SOMEONE ELSES PC WITHOUT THEIR EXPLICIT PERMISSION! THIS WILL BLUE SCREEN OF DEATH THIS PC! CONTINUE AT YOUR OWN RISK! WE HOLD NO RESPONSIBILITY FOR PC DAMAGE, LOSS OF DATA, AND/OR ANYTHING ELSE, EVEN IF THE INSTRUCTIONS ARE WRONG, AND/OR MISSING, AND/OR THIS BATCH FILE DOES SOMETHING ELSE OTHER THAN INTENDED!
-goto Disclaimer
 echo.
 set Disclaimer=
 set /p Disclaimer="Do you agree to the Disclaimer? (Yes/No) "
