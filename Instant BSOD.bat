@@ -2,7 +2,7 @@
 setlocal
 title Instant BSOD
 echo Program Name: Instant BSOD
-echo Version: 2.0.4
+echo Version: 2.0.5
 echo Developer: @YonatanReuvenIsraeli
 echo Website: https://www.yonatanreuvenisraeli.dev
 echo License: GNU General Public License v3.0
@@ -33,7 +33,7 @@ set svchost=
 set /p svchost="This will end the system process svchost.exe and will Blue Screen of Death this PC. Are you okay with that? (Yes/No) "
 if /i "%svchost%"=="Yes" goto Warning
 if /i "%svchost%"=="No" goto Close
-echo Invalid Syntax!
+echo Invalid syntax!
 goto svchost
 
 :Warning
@@ -42,7 +42,7 @@ set Warning=
 set /p Warning="READ WARNING --> THERE IS NO GOING BACK AFTER THIS! THIS IS YOUR LAST CHANCE TO STOP! THIS WILL BLUE SCREEN OF DEATH THIS COMPUTER! ARE YOU SURE YOU WANT TO CONTINUE? (Yes/No) "
 if /i "%Warning%"=="Yes" goto BSOD
 if /i "%Warning%"=="No" goto Close
-echo Invalid Syntax!
+echo Invalid syntax!
 goto Warning
 
 :BSOD
