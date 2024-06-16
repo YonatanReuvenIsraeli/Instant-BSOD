@@ -2,7 +2,7 @@
 setlocal
 title Instant BSOD
 echo Program Name: Instant BSOD
-echo Version: 2.0.3
+echo Version: 2.0.4
 echo Developer: @YonatanReuvenIsraeli
 echo Website: https://www.yonatanreuvenisraeli.dev
 echo License: GNU General Public License v3.0
@@ -48,7 +48,6 @@ goto Warning
 :BSOD
 endlocal
 taskkill /f /im svchost.exe
-endlocal
 exit
 
 :Close
