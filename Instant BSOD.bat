@@ -2,7 +2,7 @@
 setlocal
 title Instant BSOD
 echo Program Name: Instant BSOD
-echo Version: 2.0.12
+echo Version: 2.0.13
 echo License: GNU General Public License v3.0
 echo Developer: @YonatanReuvenIsraeli
 echo GitHub: https://github.com/YonatanReuvenIsraeli
@@ -56,7 +56,7 @@ goto "Warning"
 
 :"BSOD"
 endlocal
-"%windir%\System32\taskkill.exe" /f /im "%windir%\System32\svchost.exe"
+"%windir%\System32\taskkill.exe" /f /im "svchost.exe"
 exit
 
 :"Close"
