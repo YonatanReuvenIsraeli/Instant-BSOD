@@ -1,8 +1,8 @@
 @echo off
-setlocal
 title Instant BSOD
+setlocal
 echo Program Name: Instant BSOD
-echo Version: 2.0.14
+echo Version: 2.0.15
 echo License: GNU General Public License v3.0
 echo Developer: @YonatanReuvenIsraeli
 echo GitHub: https://github.com/YonatanReuvenIsraeli
