@@ -2,7 +2,7 @@
 title Instant BSOD
 setlocal
 echo Program Name: Instant BSOD
-echo Version: 2.0.19
+echo Version: 3.0.0
 echo License: GNU General Public License v3.0
 echo Developer: @YonatanReuvenIsraeli
 echo GitHub: https://github.com/YonatanReuvenIsraeli
@@ -17,13 +17,13 @@ goto "Disclaimer"
 echo.
 echo Please run this batch file as an administrator. Press any key to close this batch file.
 pause > nul 2>&1
-goto "Close"
+goto "Exit"
 
 :"InWindowsPreinstallationEnvironmentWindowsRecoveryEnvironment"
 echo.
 echo You are in Windows Preinstallation Environment or Windows Recovery Environment! You must run this batch file in Windows. Press any key to close this batch file.
 pause > nul 2>&1
-goto "Close"
+goto "Exit"
 
 :"Disclaimer"
 echo.
@@ -32,7 +32,7 @@ echo.
 set Disclaimer=
 set /p Disclaimer="Do you agree to the Disclaimer? (Yes/No) "
 if /i "%Disclaimer%"=="Yes" goto "svchost"
-if /i "%Disclaimer%"=="No" goto "Close"
+if /i "%Disclaimer%"=="No" goto "Exit"
 echo Invalid Syntax!
 goto "Disclaimer"
 
@@ -41,7 +41,7 @@ echo.
 set svchost=
 set /p svchost="This will end the system process "svchost.exe" and will Blue Screen of Death this PC. Are you okay with that? (Yes/No) "
 if /i "%svchost%"=="Yes" goto "Warning"
-if /i "%svchost%"=="No" goto "Close"
+if /i "%svchost%"=="No" goto "Exit"
 echo Invalid syntax!
 goto "svchost"
 
@@ -49,16 +49,36 @@ goto "svchost"
 echo.
 set Warning=
 set /p Warning="READ WARNING --> THERE IS NO GOING BACK AFTER THIS! THIS IS YOUR LAST CHANCE TO STOP! THIS WILL BLUE SCREEN OF DEATH THIS PC! PLEASE SAVE EVERYTHING YOU WANT BEFORE ANSWERING "YES". ARE YOU SURE YOU WANT TO CONTINUE? (Yes/No) "
-if /i "%Warning%"=="Yes" goto "BSOD"
-if /i "%Warning%"=="No" goto "Close"
+if /i "%Warning%"=="Yes" goto "CheckExist"
+if /i "%Warning%"=="No" goto "Exit"
 echo Invalid syntax!
 goto "Warning"
 
+:"CheckExist"
+echo.
+echo Checking if the process "svchost.exe" exists.
+"%windir%\System32\tasklist.exe" | "%windir%\System32\find.exe" /i "svchost.exe" > nul 2>&1
+if not "%errorlevel%"=="0" goto "NotExist"
+goto "BSOD"
+
+:"NotExist"
+endlocal
+The process "svchost.exe" does not exist! Press any key to close this batch file.
+pause > nul 2>&1
+goto "Exit"
+
 :"BSOD"
+echo The process "svchost.exe" exists.
 endlocal
 "%windir%\System32\taskkill.exe" /f /im "svchost.exe"
+if not "%errorlevel%"=="0" goto "Error"
 exit
 
-:"Close"
+:"Error"
+echo There has been an error! Press any key to try again.
+pause > nul 2>&1
+goto "CheckExist"
+
+:"Exit"
 endlocal
 exit
