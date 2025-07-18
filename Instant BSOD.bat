@@ -2,7 +2,7 @@
 title Instant BSOD
 setlocal
 echo Program Name: Instant BSOD
-echo Version: 3.0.2
+echo Version: 3.0.3
 echo License: GNU General Public License v3.0
 echo Developer: @YonatanReuvenIsraeli
 echo GitHub: https://github.com/YonatanReuvenIsraeli
@@ -63,7 +63,7 @@ goto "BSOD"
 
 :"NotExist"
 endlocal
-The process "svchost.exe" does not exist! Press any key to close this batch file.
+The process "svchost.exe" does not exist! This batch file cannot BSOD this PC. Press any key to close this batch file.
 pause > nul 2>&1
 goto "Exit"
 
