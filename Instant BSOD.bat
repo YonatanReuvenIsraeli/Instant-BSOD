@@ -2,7 +2,7 @@
 title Instant BSOD
 setlocal
 echo Program Name: Instant BSOD
-echo Version: 2.0.18
+echo Version: 2.0.19
 echo License: GNU General Public License v3.0
 echo Developer: @YonatanReuvenIsraeli
 echo GitHub: https://github.com/YonatanReuvenIsraeli
@@ -48,7 +48,7 @@ goto "svchost"
 :"Warning"
 echo.
 set Warning=
-set /p Warning="READ WARNING --> THERE IS NO GOING BACK AFTER THIS! THIS IS YOUR LAST CHANCE TO STOP! THIS WILL BLUE SCREEN OF DEATH THIS PC! PLEASE SAVE EVERTHING YOU WANT BEFORE ANSWERING "YES". ARE YOU SURE YOU WANT TO CONTINUE? (Yes/No) "
+set /p Warning="READ WARNING --> THERE IS NO GOING BACK AFTER THIS! THIS IS YOUR LAST CHANCE TO STOP! THIS WILL BLUE SCREEN OF DEATH THIS PC! PLEASE SAVE EVERYTHING YOU WANT BEFORE ANSWERING "YES". ARE YOU SURE YOU WANT TO CONTINUE? (Yes/No) "
 if /i "%Warning%"=="Yes" goto "BSOD"
 if /i "%Warning%"=="No" goto "Close"
 echo Invalid syntax!
