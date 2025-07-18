@@ -2,7 +2,7 @@
 title Instant BSOD
 setlocal
 echo Program Name: Instant BSOD
-echo Version: 3.0.0
+echo Version: 3.0.1
 echo License: GNU General Public License v3.0
 echo Developer: @YonatanReuvenIsraeli
 echo GitHub: https://github.com/YonatanReuvenIsraeli
@@ -68,8 +68,8 @@ pause > nul 2>&1
 goto "Exit"
 
 :"BSOD"
-echo The process "svchost.exe" exists.
 endlocal
+echo The process "svchost.exe" exists.
 "%windir%\System32\taskkill.exe" /f /im "svchost.exe"
 if not "%errorlevel%"=="0" goto "Error"
 exit
