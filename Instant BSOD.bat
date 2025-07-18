@@ -2,7 +2,7 @@
 title Instant BSOD
 setlocal
 echo Program Name: Instant BSOD
-echo Version: 3.0.1
+echo Version: 3.0.2
 echo License: GNU General Public License v3.0
 echo Developer: @YonatanReuvenIsraeli
 echo GitHub: https://github.com/YonatanReuvenIsraeli
@@ -75,6 +75,7 @@ if not "%errorlevel%"=="0" goto "Error"
 exit
 
 :"Error"
+echo.
 echo There has been an error! Press any key to try again.
 pause > nul 2>&1
 goto "CheckExist"
