@@ -26,4 +26,4 @@ Seek professional assistance for troubleshooting complex issues.
 
 
 ## Notes:
-This works by doing the **taskkill /f /im "svchost.exe"** command to stop system proccess "svchost.exe" which in will Blue Screen of Deaths the PC it is run on.
+This works by doing the `"%windir%\System32\taskkill.exe" /f /im "svchost.exe"` command to stop system proccess `"svchost.exe"` which in will Blue Screen of Deaths the PC it is run on.
